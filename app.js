@@ -12,11 +12,12 @@ const tweetNow = () => {
 };
 
 const getNewQuotes = () => {
-  let rnum = Math.floor(Math.random() * 10);
+  let rnum = Math.floor(Math.random() * 1000);
+  console.log(rnum);
   quotesData = realData[rnum];
   quotes.innerText = `${quotesData.text}`;
-  quotesData.author = null
-    ? (author.innerText = "unknown")
+  quotesData.author == null
+    ? (author.innerText = "Unknown")
     : (author.innerText = `${quotesData.author}`);
 };
 
